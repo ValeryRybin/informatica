@@ -1,4 +1,3 @@
-
 a=input().split()
 c=len(a)
 b=""
