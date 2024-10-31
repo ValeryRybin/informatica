@@ -15,7 +15,7 @@ frame3.pack(side=LEFT,fill="both", expand=True)
 
 a1="погода"
 a2="ощущается"
-city = 'Долгопрудный'
+"""city = 'Долгопрудный'
 url = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&lang=ru&appid=2e446065206cfc6d7bafbb82078c86f5'
 # отправляем запрос на сервер и сразу получаем результат
 weather_data = requests.get(url).json()
@@ -27,14 +27,14 @@ temperature_feels = round(weather_data['main']['feels_like'])
 #print('Ощущается как', str(temperature_feels), '°C')
 a1=str('Сейчас в городе', city, str(temperature), '°C')
 a2=str('Ощущается как', str(temperature_feels), '°C')
-
+"""
 labelwth1 = Label(frame3, text=a1, font=("Arial", 14), fg="red", bg="#FBFB32")
 labelwth1.pack(pady=10)
 labelwth1 = Label(frame3, text=a2, font=("Arial", 14), fg="red", bg="#FBFB32")
 labelwth1.pack(pady=10)
 
 canvas = Canvas(frame3, width=100, height=100)
-canvas.pack(fill="both", expand=True)
+canvas.pack(fill="both", expand=True, pady = 10)
 weatherim = PhotoImage(file="C:\\Users\\valer\programming\\1kurs\\dz\\dz_01.11\\weather.png")
 canvas.create_image(0,0,anchor=NW,image=weatherim)
 
@@ -61,6 +61,12 @@ cal.bind("<<CalendarSelected>>", updateLabel)
  
 label = Label(frame2, text = "Выбранная дата: -")
 label.pack()
+
+labelnotice = Label(frame2,text = "Заметки")
+labelnotice.pack()
+
+text = Text(frame2, width=20, height=5)
+text.pack(fill="both", expand=True, pady = 10)
 
 
 root.mainloop()
