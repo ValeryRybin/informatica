@@ -1,4 +1,3 @@
-# Import Required Library
 from tkinter import *
 from tkcalendar import Calendar
 from datetime import *
