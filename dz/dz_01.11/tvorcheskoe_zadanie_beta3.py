@@ -27,8 +27,8 @@ temperature_feels = round(weather_data['main']['feels_like'])
 # выводим значения на экран
 #print('Сейчас в городе', city, str(temperature), '°C')
 #print('Ощущается как', str(temperature_feels), '°C')
-a1=str('Сейчас в городе', city, str(temperature), '°C')
-a2=str('Ощущается как', str(temperature_feels), '°C')
+a1='Сейчас в городе '+ city+ " "+ str(temperature) + '°C'
+a2='Ощущается как '+ str(temperature_feels) +'°C'
 
 labelwth1 = Label(frame3, text=a1, font=("Arial", 14), fg="red", bg="#FBFB32")
 labelwth1.pack(pady=10)
