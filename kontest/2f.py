@@ -1,8 +1,8 @@
-x=[]
+"""x=[]
 y=[]
 n = int(input().strip())
 points = [list(map(int, input().strip().split())) for _ in range(n)]
-print(points)
+print(points)"""
 '''n = int(input())
 for i in range (n):
     numbers = list(map(int, input().split()))
